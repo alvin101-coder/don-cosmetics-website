@@ -26,11 +26,16 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
-#banner{
+nav ul li a:hover{
+    color: #ffe6f0;
+}
+#home{
     background-color: #ffe6f0;
     text-align: center;
     padding: 50px 20px;
+    background-image: url(url../assets/don-logo.jpg) no-repeat center center/cover;
 }
 .button {
     background-color: #ff4d94;
@@ -64,6 +69,7 @@ footer{
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 20px;
 }
 .category div {
     max-width: 200px;
@@ -90,10 +96,10 @@ main{
     overflow-y: auto;
     max-height: 80vh;
 }
-@media (max-width: 600px){
+@media (max-width: 768px){
     .category {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
     .category img {
         width: 90%;
@@ -101,6 +107,9 @@ main{
     }
     .button{
         width: 80%;
+    }
+    .category div {
+        width: 90%;
     }
 }
 .social-icons{
@@ -171,4 +180,50 @@ form button {
 }
 form .button:hover{
     background-color: #e60073;
+}
+
+.product-card{
+    background-color: #ffe6f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.product-card img{
+    /* width: 100%; */
+    /* height: 150px; */
+    /* object-fit: cover; */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.product-card h3{
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ff4d94;
+}
+.product-card p{
+    font-size: 14px;
+    color: #555;
+}
+.product-card button {
+    padding: 10px 15px;
+    background-color: #ff80b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+.product-card button:hover{
+    background-color: #e60073;
+}
+@media (max-width: 768px) {
+    .category
 }
