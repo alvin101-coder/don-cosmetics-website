@@ -2,6 +2,9 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    overflow-x: hidden;
     background-color: #ffe6f0;
     color: #333;
 }
@@ -40,8 +43,10 @@ nav ul li a {
 }
 .button:hover{
     background-color: #e60073;
+    color: #ffe6f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-#featured{
+#products{
     text-align: center;
     padding: 50px;
 }
@@ -50,34 +55,68 @@ footer{
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
 .category {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 .category div {
+    max-width: 200px;
     text-align: center;
     transition: transform 0.3s ease;
+    padding-bottom: 10px;
 }
 .category div:hover {
     transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 .category img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.category h3{
+    margin-top: 10px;
+    font-size: 16px;
+}
+main{
+    overflow-y: auto;
+    max-height: 80vh;
+}
 @media (max-width: 600px){
     .category {
         flex-direction: column;
+        text-align: center;
     }
     .category img {
-        width: 100%;
+        width: 90%;
+        height: auto;
     }
+    .button{
+        width: 80%;
+    }
+}
+.social-icons{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    padding: 0;
+}
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    color: #ff80b3;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Don Cosmetics</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -14,20 +15,22 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    <section id="banner">
+    <section id="home">
         <h2>Discover the Latest in Beauty and Fashion</h2>
-        <p>Tour one-stop shop for elegance and style.</p>
+        <p>Your one-stop shop for elegance and style.</p>
         <a href="#products" class="button">Shop Now</a>
     </section>
+   
     <main>
-        <section id="featured">
+        <section id="products">
             <h2>Our Top Categories</h2>
+            <p>Browse through our amazing collection!</p>
             <div class="category">
             <div>
                 <img src="assets/haircare.jpg" alt="Hair Care">
@@ -48,8 +51,26 @@
         </div>
         </section>
     </main>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us!</p>
+        <form action="">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email">
+            <label for="message">Message:</label>
+            <textarea name="" id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
     <footer>
         <p>&copy; 2025 Don Cosmetics. All rights reserved.</p>
+        <p>Contact Us: +254701575218 </p>
+        <ul class="social-icons">
+            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+        </ul>
     </footer>
 </body>
 </html>
