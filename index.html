@@ -16,7 +16,15 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
+                <li>
+                    <a href="#products">Products</a>
+                    <ul class="dropdown">
+                        <li><a href="haircare.html">Hair Care</a></li>
+                        <li><a href="beauty.html">Beauty</a></li>
+                        <li><a href="jewelry.html">Jewelry</a></li>
+                        <li><a href="clothing.html">Clothing</a></li>
+                    </ul>
+                </li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
@@ -31,30 +39,39 @@
         <section id="products">
             <h2>Our Top Categories</h2>
             <p>Browse through our amazing collection!</p>
+            <label for="category-filter">Filter by category:</label>
+            <select name="" id="category-filter">
+                <option value="all">All</option>
+                <option value="haircare">Hair Care</option>
+                <option value="beauty">Beauty</option>
+                <option value="jewelry">Jewelry</option>
+                <option value="clothing">Clothing</option>
+            </select>
+            
             <div class="category">
-            <div class="product-card">
+            <div class="product-card" data-category="haircare">
                 <img src="assets/haircare.jpg" alt="Hair Care">
                 <h3>Hair Care</h3>
                 <p>Explore our range of shampoos, conditioners, and treatments.</p>
-                <button>Shop Hair Care</button>
+                <a href="haircare.html" class="button">Shop Hair Care</a>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="beauty">
                 <img src="assets/beauty.jpg" alt="Beauty">
                 <h3>Beauty</h3>
                 <p>Discover cosmetics and skincare for every occasion.</p>
-                <button>Shop Beauty</button>
+                <a href="beauty.html" class="button">Shop Beauty</a>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="jewelry">
                 <img src="assets/jewelry.jpg" alt="Jewelry">
                 <h3>Jewelry</h3>
                 <p>Elegant accessories to complete your look.</p>
-                <button>Shop Jewelry</button>
+                <a href="jewelry.html" class="button">Shop Jewelry</a>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-category="clothing">
                 <img src="assets/clothing.jpg" alt="Clothing">
                 <h3>Clothing</h3>
                 <p>Stylish and comfortable clothing for everyone.</p>
-                <button>Shop Clothing</button>
+                <a href="clothing.html" class="button">Shop Clothing</a>
             </div>
         </div>
         </section>
@@ -81,4 +98,5 @@
         </ul>
     </footer>
 </body>
+<script src="js/main.js"></script>
 </html>
